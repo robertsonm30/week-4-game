@@ -3,8 +3,6 @@ $(document).ready(function ()
 {
 	var wins = 0;
 	var losses = 0;
-	console.log("wins" + wins)
-	console.log("losses" + losses)
 
 	var score = 0;
 	var red = Math.floor(Math.random() * (12 - 1)) + 1 ;
@@ -13,6 +11,7 @@ $(document).ready(function ()
 	var green = Math.floor(Math.random() * (12 - 1)) + 1 ;
 	var targetScore = Math.floor(Math.random() * (120 - 19)) + 19 ;
 
+	// This Function resets the Variables when the game is over
 	function reset() 
 		{
 		 score = 0;
@@ -25,21 +24,17 @@ $(document).ready(function ()
 		};
 
 	
-
+	// This Function is The Game it is set this way to make the scores show up correctly in the DOM
 	function game() 
 
 		{
 			
 
-			
-			console.log(red)
-			console.log(blue)
-			console.log(yellow)
-			console.log(green)
-			console.log(targetScore)
-
+		
+			// assigns click event to variable 	
 			var userChoice = $(this).attr("value");
-			// console.log(choice)
+
+			// Compare Click Variable to Diamond Variable and increase the score based on value
 			if (score < targetScore) {
 
 				switch (userChoice) {
@@ -60,13 +55,14 @@ $(document).ready(function ()
 
 
 
-			
+			// When Score is equal to target score set win  and reset
 			} else if (score == targetScore) {
 				wins++;
 				reset();
 				console.log("wins" + wins)
 				console.log("losses" + losses)
 
+			// When Score is higher to target score set loss and reset
 			} else if (score > targetScore) {
 				losses++;
 				reset();	
@@ -74,14 +70,16 @@ $(document).ready(function ()
 				console.log("losses" + losses)
 			}
 
-			console.log(score)
+			// Print Score to DOM
 			$("#YOURSCORE").text(score);
 			$("#GOAL").text(targetScore);
 
 		}
 
+	// This gets the Click event
 	$(".button").on("click", game) ;
 
+	// This runs the game function
 	game();
 
 });
