@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+<head>
+		<script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+		<link rel="stylesheet" type="text/css" href="assets/css/reset.css">
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.3/css/bootstrap.min.css" integrity="sha384-Zug+QiDoJOrZ5t4lssLdxGhVrurbmBWopoEl+M6BdEfwnCJZtKxi1KgxUyJq13dy" crossorigin="anonymous">
+		<link rel="stylesheet" type="text/css" href="assets/css/syle.css">
+		<script src="https://use.fontawesome.com/009cb5a83b.js"></script>
+
+	<title>Diamod Collector</title>
+
+</head>
+
+<body>
+	<div class="container">
+		<div class="row">
+			<div class="col-auto">
+				<div class="jumbotron jumbotron-fluid">
+					<div class="container">
+					<h1 class="display-4"><i class="fa fa-diamond" aria-hidden="true"></i>Diamond Collector!<i class="fa fa-diamond" aria-hidden="true"></i></h1>
+					</div>
+				</div>
+		<div class="row">		
+				<div class="col-4">
+				<div>
+					<p>
+						You Will Be Given A Random Number At The Start Of The Game.
+					</p>
+					<p>
+						There are Four Diamonds Below. By Clicking On The Diamond You Will add A Specific Amount Of Points To Your Total Score.
+					</p>
+					<p>
+						You Win The Game By Matching Your Total Score To The Random Number, You Lose The Game If Your Total Score Goes Above The Random Number.
+					</p>
+					<p>
+						The Value Of Each Diamond Is Hidden From You Until You Click On It. Deterimne The Value Of Each Diamond Based On The Increase In Your Score. 
+					</p>
+					<p>
+						Each Time When The Game Starts, The Game Will Change The Value Of The Diamonds.
+					</p>
+				</div>
+				
+				<div class="card">
+					<div class="card-header">
+						Random Number to Match
+					</div>
+					<div class="card-body">
+						<p id="GOAL"></p>
+					</div>
+				</div>
+				
+
+
+				<div>
+					<button value="red" type="button" class="btn btn-danger button"><i class="fa fa-diamond" aria-hidden="true"></i></button>
+					<button value="blue" type="button" class="btn btn-primary button"><i class="fa fa-diamond" aria-hidden="true"></i></button>
+					<button value="yellow" type="button" class="btn btn-warning button"><i class="fa fa-diamond" aria-hidden="true"></i></button>
+					<button value="green" type="button" class="btn btn-success button"><i class="fa fa-diamond" aria-hidden="true"></i></button>
+					<script type="text/javascript" src="assets/javascript/game.js"></script>
+				</div>
+
+
+				<div class="card">
+					<div class="card-header">
+						Current Score
+					</div>
+					<div class="card-body">
+						<p id="YOURSCORE"></p>
+					</div>
+				</div>
+					
+				</div>
+
+
+
+
+			</div>
+			</div>
+			</div>
+		</div>
+	</div>
+	
+
+
+
+</body>
+</html>
