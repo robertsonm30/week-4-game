@@ -73,6 +73,7 @@ $(document).ready(function ()
 			// Print Score to DOM
 			$("#YOURSCORE").text(score);
 			$("#GOAL").text(targetScore);
+			$("#SCOREBOARD").text("Wins: " + wins + "   " + "Losses " +losses)
 
 		}
 
